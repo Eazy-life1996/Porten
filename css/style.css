@@ -26,6 +26,24 @@
     url("font/PTSans-Bold.ttf") format("ttf")
 }
 
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: local("PlayfairDisplay-Bold"),
+    url("font/PlayfairDisplay-Bold.ttf") format("ttf")
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local("PlayfairDisplay-Regular"),
+    url("font/PlayfairDisplay-Regular.ttf") format("ttf")
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -48,6 +66,10 @@ ul {
 
 a {
   text-decoration: none;
+  display: block;
+}
+
+img {
   display: block;
 }
 
@@ -169,4 +191,76 @@ a {
   line-height: 150%;
   text-align: center;
   text-transform: uppercase;
+}
+/* Выше стилизован блок инфо */
+
+.news {
+  background-color: var(--background-black);
+  color: var(--basic-white);
+  font-family: 'PlayfairDisplay', Arial, sans-serif;
+}
+
+.news__block {
+  background-color: var(--background-black);
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.news__block-inner {
+  width: 750px;
+  padding-bottom: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news__block-inner--second,
+.news__block-inner--third {
+  width: 450px;
+}
+
+.news__block-inner--second {
+  background-image: url(../img/new-collection.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.news__block-inner--third {
+  background-image: url(../img/jacket.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.news__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 500px;
+}
+
+.news__vidget {
+  background-color: var(--background-black-third);
+  width: 130px;
+  padding-top: 55px;
+  padding-bottom: 56px;
+}
+
+.news__img {
+  margin: 0 auto;
+}
+
+.news__title {
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.news__decor {
+  width: 120px;
+  height: 1px;
+  background-color: var(--basic-white);
 }
