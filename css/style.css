@@ -9,39 +9,20 @@
 }
 
 @font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: local("PTSans-Regular"),
-    url("font/PTSans-Regular.ttf") format("ttf")
+  font-family: 'PT sans';
+  src: url('/font/PTSans-Regular.ttf');
 }
 
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: bold;
-  font-display: swap;
-  src: local("PTSans-Bold"),
-    url("font/PTSans-Bold.ttf") format("ttf")
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT sans';
 }
 
-@font-face {
-  font-family: "PlayfairDisplay";
-  font-style: normal;
-  font-weight: bold;
-  font-display: swap;
-  src: local("PlayfairDisplay-Bold"),
-    url("font/PlayfairDisplay-Bold.ttf") format("ttf")
-}
-
-@font-face {
-  font-family: "PlayfairDisplay";
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: local("PlayfairDisplay-Regular"),
-    url("font/PlayfairDisplay-Regular.ttf") format("ttf")
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .visually-hidden {
@@ -51,13 +32,6 @@
   height: 1px;
   margin: -1px;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'PT Sans', Arial, sans-serif;
-}
-
 ul {
   list-style: none;
   margin: 0;
@@ -84,12 +58,17 @@ img {
 }
 
 .header__block-inner {
+  background-color: var(--background-black);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 1110px;
   margin: 0 auto;
+}
+
+.header__block-inner--second {
+  background-color: var(--background-black-second);
 }
 
 .header__list {
@@ -197,20 +176,18 @@ img {
 .news {
   background-color: var(--background-black);
   color: var(--basic-white);
-  font-family: 'PlayfairDisplay', Arial, sans-serif;
 }
 
 .news__block {
   background-color: var(--background-black);
-  width: 1200px;
+  width: 1348px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
 }
 
 .news__block-inner {
-  width: 750px;
-  padding-bottom: 75px;
+  width: 738px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -218,33 +195,27 @@ img {
 
 .news__block-inner--second,
 .news__block-inner--third {
-  width: 450px;
+  width: 610px;
+  padding: 0;
 }
 
 .news__block-inner--second {
-  background-image: url(../img/new-collection.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.news__block-inner--third {
-  background-image: url(../img/jacket.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  position: relative;
 }
 
 .news__list {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 500px;
+  width: 620px;
 }
 
 .news__vidget {
   background-color: var(--background-black-third);
-  width: 130px;
-  padding-top: 55px;
-  padding-bottom: 56px;
+  width: 150px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .news__img {
@@ -252,15 +223,76 @@ img {
 }
 
 .news__title {
-  font-size: 36px;
+  margin: 0px;
+  margin-bottom: 20px;
+  margin-top: 55px;
+  font-size: 22px;
   line-height: 42px;
   text-align: center;
   text-transform: uppercase;
   font-weight: lighter;
 }
 
+.news__span {
+  font-size: 16px;
+}
+
+.news__p {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.news__p-big {
+  text-align: center;
+  font-size: 12px;
+  line-height: 150%;
+  width: 470px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.news__subtitle {
+  font-size: 16px;
+  font-weight: normal;
+}
+
 .news__decor {
-  width: 120px;
-  height: 1px;
+  margin-bottom: 25px;
+  width: 100px;
+  height: 0.5px;
   background-color: var(--basic-white);
+}
+.news__link {
+  color: var(--basic-white);
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  border: 1px solid var(--basic-white);
+  padding: 10px 25px;
+}
+
+.news__link:hover {
+  color: var(--hover-grey);
+  border-color: var(--hover-grey);
+  background-color: var(--hover-white);
+}
+
+.news__title--pos,
+.news__decor--pos,
+.news__link--pos {
+  margin: 0;
+  position: absolute;
+}
+
+.news__title--pos {
+  top: 324px;
+}
+
+.news__decor--pos {
+  top: 374px;
+}
+
+.news__link--pos {
+  top: 394px;
 }
