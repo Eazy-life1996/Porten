@@ -9,6 +9,9 @@
 }
 
 body {
+  font-family: 'PT Sans',
+  Arial,
+  sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -40,6 +43,22 @@ a {
 
 img {
   display: block;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url('../fonts/PTSans-Regular.eot');
+  src: local('☺'), url('../fonts/PTSans-Regular.woff') format('woff'), url('../fonts/PTSans-Regular.ttf') format('truetype'), url('../fonts/PTSans-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('../fonts/PlayfairDisplay-Regular.eot');
+  src: local('☺'), url('../fonts/PlayfairDisplay-Regular.woff') format('woff'), url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype'), url('../fonts/PlayfairDisplay-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Выше описаны общие стили */
@@ -169,6 +188,7 @@ img {
 /* Выше стилизован блок инфо */
 
 .news {
+  font-family: 'PlayfairDisplay';
   background-color: var(--background-black);
   color: var(--basic-white);
 }
@@ -223,41 +243,31 @@ img {
   margin-top: 55px;
   font-size: 22px;
   line-height: 42px;
+  font-weight: lighter;
   text-align: center;
   text-transform: uppercase;
-  font-weight: lighter;
-}
-
-.news__span {
-  font-size: 16px;
-}
-
-.news__p {
-  font-size: 14px;
-  font-weight: lighter;
 }
 
 .news__p-big {
+  font-family: 'PT Sans';
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 150%;
   width: 470px;
   margin-top: 0;
   margin-bottom: 40px;
 }
 
-.news__subtitle {
-  font-size: 16px;
-  font-weight: normal;
+.news__p {
+  font-size: 14px;
 }
 
-.news__decor {
-  margin-bottom: 25px;
-  width: 100px;
-  height: 0.5px;
-  background-color: var(--basic-white);
+.news__subtitle {
+  font-weight: normal;
+  font-size: 16px;
 }
 .news__link {
+  font-family: 'PT Sans';
   color: var(--basic-white);
   font-size: 18px;
   line-height: 23px;
@@ -265,6 +275,13 @@ img {
   text-transform: uppercase;
   border: 1px solid var(--basic-white);
   padding: 10px 25px;
+}
+
+.news__decor {
+  margin-bottom: 25px;
+  width: 100px;
+  height: 0.5px;
+  background-color: var(--basic-white);
 }
 
 .news__link:hover {
@@ -284,10 +301,116 @@ img {
   top: 324px;
 }
 
+.news__link--pos {
+  top: 394px;
+}
+
 .news__decor--pos {
   top: 374px;
 }
 
-.news__link--pos {
-  top: 394px;
+/* Выше стилизован блок с новосятми */
+
+.arrival {
+  background-color: var(--background-black);
+  color: var(--basic-white);
+  font-family: 'PlayfairDisplay';
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+
+.arrival__block {
+  background-color: var(--background-black);
+  width: 1348px;
+  margin: 0 auto;
+}
+
+.arrival__list {
+  width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px 0;
+}
+
+.arrival__vidget {
+  background-color: var(--background-black-third);
+  width: 260px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.arrival__img {
+  margin: 0 auto;
+}
+
+.arrival__subtitle {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: lighter;
+}
+
+.arrival__p {
+  font-size: 14px;
+}
+
+.arrival__title {
+  font-weight: lighter;
+  font-size: 26px;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.arrival__decor {
+  background-color: var(--basic-white);
+  margin: 0 auto;
+  margin-bottom: 80px;
+  margin-top: 40px;
+  width: 120px;
+  height: 0.5px;
+}
+
+/* Вышк стилизован блок с новыми поступлениями */
+
+.brands {
+  background-color: var(--background-black-second);
+  color: var(--basic-white);
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+.brands__block {
+  background-color: var(--background-black-second);
+  width: 1348px;
+  margin: 0 auto;
+}
+
+.brands__decor {
+  background-color: var(--basic-white);
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 120px;
+  height: 0.5px;
+}
+
+.brands__title {
+  font-family: Playfair Display;
+  font-size: 26px;
+  font-weight: lighter;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.brands__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 1100px;
+  margin: 0 auto;
 }
