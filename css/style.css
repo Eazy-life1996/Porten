@@ -2,6 +2,7 @@
   --background-black: #000000;
   --background-black-second: #0F0F0F;
   --background-black-third: #191B1C;
+  --input-background: rgba(255, 255, 255, 0.4);
   --basic-white: #ffffff;
   --text-grey: #969696;
   --hover-grey: #1F1F1F;
@@ -336,7 +337,7 @@ img {
 
 .arrival__vidget {
   background-color: var(--background-black-third);
-  width: 260px;
+  width: 250px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -373,7 +374,7 @@ img {
   height: 0.5px;
 }
 
-/* Вышк стилизован блок с новыми поступлениями */
+/* Выше стилизован блок с новыми поступлениями */
 
 .brands {
   background-color: var(--background-black-second);
@@ -398,7 +399,7 @@ img {
 }
 
 .brands__title {
-  font-family: Playfair Display;
+  font-family: 'PlayfairDisplay';
   font-size: 26px;
   font-weight: lighter;
   line-height: 42px;
@@ -413,4 +414,111 @@ img {
   justify-content: space-around;
   width: 1100px;
   margin: 0 auto;
+}
+/* Выше стилизован блок с брэндами */
+
+.store {
+  background-image: url(../img/background-bottom.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: var(--basic-white);
+}
+
+.store__title {
+  font-family: 'PlayfairDisplay';
+  font-weight: lighter;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.store__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.store__p {
+  width: 350px;
+  font-size: 13px;
+  line-height: 150%;
+}
+
+.store__list-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 287px;
+}
+
+.store__link {
+  color: var(--basic-white);
+  background-color: var(--background-black);
+  padding: 10px 20px;
+  font-size: 13px;
+  line-height: 150%;
+}
+
+.store__link:hover,
+.store__button:hover {
+  color: var(--hover-grey);
+  background-color: var(--hover-white);
+  cursor: pointer;
+}
+
+.store__form {
+  display: flex;
+  margin-top: 37px;
+}
+
+.store__input {
+  border: none;
+  background-color: var(--input-background);
+  padding-top: 12px;
+  padding-bottom: 13px;
+  padding-left: 15px;
+  width: 210px;
+}
+
+.store__input[value] {
+  color: var(--basic-white);
+}
+
+.store__button {
+  border: none;
+  color: var(--basic-white);
+  background-color: var(--background-black);
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+/* Выше стилизован блок о магазине */
+
+.footer {
+  background-color: var(--background-black);
+  color: var(--basic-white);
+}
+
+.footer__block {
+  background-color: var(--background-black);
+  width: 1110px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.footer__p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
 }
