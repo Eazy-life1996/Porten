@@ -7,6 +7,7 @@
   --text-grey: #969696;
   --hover-grey: #1F1F1F;
   --hover-white: #ffffff;
+  --checkbox-green: #25dc00;
 }
 
 body {
@@ -521,4 +522,114 @@ img {
   margin: 0;
   font-size: 12px;
   line-height: 16px;
+}
+/* Выше стилизован футер */
+
+.modal-none {
+  display: none;
+}
+
+.modal {
+  width: 500px;
+  background-color: var(--background-black-second);
+  color: var(--basic-white);
+  box-shadow: 0px 0px 15px var(--background-black);
+  padding: 35px 40px;
+  position: fixed;
+  top: 25%;
+  left: 30%;
+}
+
+.modal__form {
+  font-family: 'PlayfairDisplay';
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 7px;
+}
+
+.modal__input {
+  border: none;
+  background-color: var(--input-background);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  color: var(--basic-white);
+}
+
+.modal__button {
+  cursor: pointer;
+  border: none;
+  background-color: var(--background-black-third);
+  color: var(--basic-white);
+  padding: 5px 10px;
+  width: 80px;
+  margin-left: 80%;
+}
+
+.modal__button--form {
+  width: 200px;
+  margin: 0 auto;
+  padding: 7px 0;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.modal__button:hover {
+  background-color: var(--background-black);
+}
+
+.modal__link {
+  color: var(--basic-white);
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+
+.modal__link:hover {
+  text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  width: 41px;
+  height: 20px;
+  background-color: var(--background-black-third);
+  border-radius: 10%;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--checkbox-green);
+  transition: 0.5s ease;
+}
+
+input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  top: 219px;
+  left: 45px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--basic-white);
+  border-radius: 10%;
+  transition: 0.5s ease;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translate(20px);
+  transition: 0.5s ease;
+}
+
+.modal__label {
+  cursor: pointer;
+}
+
+.modal__label--checkbox {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
 }

@@ -34,7 +34,7 @@
         </ul>
         <ul class="header__list header__list--second">
         <li class="header__item">
-          <a href="#" class="header__link">
+          <a href="#" class="header__link btn-open">
             <svg class="header__svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.25001 1.16675H10.5C11.1417 1.16675 11.6667 1.69175 11.6667 2.33341V11.6667C11.6667 12.3084 11.1417 12.8334 10.5 12.8334H5.25001C4.60834 12.8334 4.08334 12.3084 4.08334 11.6667V10.5001H5.25001V11.6667H10.5V2.33341H5.25001V3.50008H4.08334V2.33341C4.08334 1.69175 4.60834 1.16675 5.25001 1.16675Z" fill="#969696"/>
               <path d="M5.88583 9.09409L6.70833 9.91658L9.625 6.99992L6.70833 4.08325L5.88583 4.90575L7.39083 6.41659H1.75V7.58325H7.39083L5.88583 9.09409Z" fill="#969696"/>
@@ -350,5 +350,21 @@
       </p>
     </div>
   </footer>
+  <div class="modal modal-none">
+    <button class="modal__button btn-close">Закрыть</button>
+    <form class="modal__form" action="#" method="get">
+      <label class="modal__label" for="login">Ваш логин</label>
+      <input class="modal__input" type="text" name="login" id="login">
+      <label class="modal__label" for="password">Пароль</label>
+      <input class="modal__input" type="password" name="password" id="password">
+      <label class="modal__label modal__label--checkbox">
+        <input type="checkbox" name="member" checked>
+        Запомнить
+      </label>
+      <button class="modal__button modal__button--form" type="submit">Войти</button>
+    </form>
+    <a href="#" class="modal__link">Забыли пароль ?</a>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 </html>
